@@ -4,7 +4,10 @@ using PathCreation;
 public class TrainPathFollower : MonoBehaviour
 {
     public PathCreator pathCreator;
-    public float speed = 5;
+    [HideInInspector]
+    public float speed = 0;
+    public float maxSpeed = 5;
+    public float speedLerpFalloff = 0.02f;
     float wagonOffset;
     float distanceTravelled;
 
@@ -33,10 +36,17 @@ public class TrainPathFollower : MonoBehaviour
                 transform.GetChild(i).rotation = pathCreator.path.GetRotationAtDistance(wagonDistance);
             }
         }
+
+        speed = Mathf.Lerp(speed, 0, speedLerpFalloff);
     }
 
     void OnPathChanged()
     {
         distanceTravelled = pathCreator.path.GetClosestDistanceAlongPath(transform.position);
+    }
+
+    public Vector3 GetDirection()
+    {
+        return pathCreator.path.GetDirectionAtDistance(distanceTravelled);
     }
 }
