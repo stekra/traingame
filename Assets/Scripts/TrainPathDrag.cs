@@ -20,6 +20,11 @@ public class TrainPathDrag : MonoBehaviour
 
     void Update()
     {
+        if (pathFollower.speedFrozen)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

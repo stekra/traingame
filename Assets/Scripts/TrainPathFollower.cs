@@ -10,6 +10,8 @@ public class TrainPathFollower : MonoBehaviour
     public float speedLerpFalloff = 0.02f;
     float wagonOffset;
     float distanceTravelled;
+    [HideInInspector]
+    public bool speedFrozen = false;
 
     void Start()
     {
@@ -37,7 +39,10 @@ public class TrainPathFollower : MonoBehaviour
             }
         }
 
-        speed = Mathf.Lerp(speed, 0, speedLerpFalloff);
+        if (!speedFrozen)
+        {
+            speed = Mathf.Lerp(speed, 0, speedLerpFalloff);
+        }
     }
 
     void OnPathChanged()
