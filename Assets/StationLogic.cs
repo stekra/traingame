@@ -15,6 +15,8 @@ public class StationLogic : MonoBehaviour
         otherStations = new List<StationLogic>();
         otherStations.AddRange(FindObjectsOfType<StationLogic>());
         otherStations.Remove(this);
+
+        SetVisuals();
     }
 
     void OnTriggerEnter(Collider other)
