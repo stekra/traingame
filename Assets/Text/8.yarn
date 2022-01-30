@@ -1,0 +1,46 @@
+﻿title: 8
+tags: 
+colorID: 0
+position: 749,2992
+---
+I'm still on the train. I should be arriving soon. I am not eager to get there. Riding the train whilst daydreaming is one of my favorite things to do. We enter a tunnel.
+-> Get coffee
+    <<jump GetCoffeEnd>>
+-> Stare at reflection
+    <<jump StareAtReflection>>
+===
+
+title: GetCoffeEnd
+tags: 
+colorID: 0
+position: 577,3262
+---
+The conductor passed by. "Excuse me, in which direction is the restaurant car?". He smiles. "Either!", he exclaims enthusiastically. This is too much for me, I think and I stay seated.
+<<jump StareAtReflection>>
+===
+
+title: StareAtReflection
+tags: 
+colorID: 0
+position: 751,3529
+---
+I stare at my reflection in the window, shifting my focus back and forth between my face and the tunnel wall that is rushing by at an incomprehensible speed.
+<<jump StareAtReflection2>>
+===
+
+title: StareAtReflection2
+tags: 
+colorID: 0
+position: 751,3529
+---
+This is the longest train tunnel in world, I suddenly remember. I think about the termites' beautiful constructions. All that I can do is ponder the fine veins in the wood from above.
+<<jump StareAtReflection3>>
+===
+
+title: StareAtReflection3
+tags: 
+colorID: 0
+position: 751,3529
+---
+What would I give to inhabit the mind of a termite, the great artisan, hurrying back and forth, left and right through the many branching routes of its home. I am in tunnel, too. But I can only go straight ahead.
+===

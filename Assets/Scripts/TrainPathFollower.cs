@@ -12,6 +12,7 @@ public class TrainPathFollower : MonoBehaviour
     float distanceTravelled;
     [HideInInspector]
     public bool speedFrozen = false;
+    public AudioSource rollingAudio;
 
     void Start()
     {
@@ -42,6 +43,9 @@ public class TrainPathFollower : MonoBehaviour
         if (!speedFrozen)
         {
             speed = Mathf.Lerp(speed, 0, speedLerpFalloff);
+            float speed01 = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(speed));
+            rollingAudio.volume = speed01 / 2;
+            rollingAudio.pitch = 1 + speed01 * 0.3f;
         }
     }
 

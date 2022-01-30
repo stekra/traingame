@@ -1,0 +1,18 @@
+﻿title: 6
+tags: 
+colorID: 0
+position: 750,1925
+---
+Together we walked into the forest, where the construction lay almost finished, but paused due the recent disruption.
+-> Ask engineer about state of infestation
+    <<jump AskEngineer>>
+-> Check on infestation
+===
+
+title: AskEngineer
+tags: 
+colorID: 0
+position: 519,2193
+---
+"They've been gobbling up the foundation like it ain't nothing" He looked troubled. "To be frank, I am not sure how the structure is still standing".
+===

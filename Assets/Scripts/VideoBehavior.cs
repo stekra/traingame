@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using Yarn.Unity;
 
 public class VideoBehavior : MonoBehaviour
 {
@@ -20,9 +21,11 @@ public class VideoBehavior : MonoBehaviour
 
     RawImage videoTexture;
     VideoPlayer videoPlayer;
+    DialogueRunner dialogueRunner;
 
     void Start()
     {
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
         videoTexture = GetComponent<RawImage>();
         videoPlayer = GetComponent<VideoPlayer>();
         videoPlayer.clip = clips[clipIndex];
@@ -31,6 +34,7 @@ public class VideoBehavior : MonoBehaviour
 
     void Update()
     {
+        // Check fading in condition
         if (!active)
         {
             if (inSpeedRange() && !fadingOut)
@@ -43,6 +47,7 @@ public class VideoBehavior : MonoBehaviour
             }
         }
 
+        // Fade out all the way after being active
         if (fadingOut && fade <= 0)
         {
             fadingOut = false;
@@ -50,13 +55,17 @@ public class VideoBehavior : MonoBehaviour
             videoPlayer.clip = clips[clipIndex];
         }
 
+        // Set the alpha of the texture
         currentFadeColor.a = Mathf.InverseLerp(2, fadeDuration, fade);
         videoTexture.color = currentFadeColor;
 
-        if (fade >= fadeDuration && !fadingOut)
+        // Activate!
+        if (fade >= fadeDuration && !active && !fadingOut)
         {
             active = true;
             train.speedFrozen = true;
+
+            dialogueRunner.StartDialogue(clipIndex.ToString());
         }
     }
 
@@ -65,18 +74,20 @@ public class VideoBehavior : MonoBehaviour
         return Mathf.Abs(train.speed) >= speedRange.x && Mathf.Abs(train.speed) <= speedRange.y;
     }
 
-    // [YarnCommand("stopVideo")]
     public void stopVideo()
     {
-        active = false;
-        clipIndex += 1;
-        if (clipIndex >= clips.Length)
+        if (active)
         {
-            print("The End!");
-        }
-        else
-        {
+            active = false;
+            clipIndex += 1;
+
             fadingOut = true;
         }
+    }
+
+    [YarnCommand("quit")]
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
