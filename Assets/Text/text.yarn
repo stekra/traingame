@@ -30,7 +30,7 @@ tags:
 colorID: 0
 position: 753,1399
 ---
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 The house I was building turned out to have been befallen by a pest of termites feasting on all of its wooden components.
 <<jump Termites2>>
 ===
@@ -83,7 +83,7 @@ tags:
 colorID: 0
 position: 753,866
 ---
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 Trees and houses drive by and I wonder where they're headed.
     <<jump WorkTravel>>
 ===
@@ -92,7 +92,7 @@ tags:
 colorID: 0
 position: 752,1119
 ---
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 It's not unusual for me to travel for work. My most recent trip is still present in my mind.
     <<jump Termites1>>
 ===
@@ -101,7 +101,7 @@ tags:
 colorID: 0
 position: 750,1925
 ---
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 On my train ride that day, I had funny feeling in my stomach that had nothing to do with all the coffee I had that day. The project's lead engineer was kind enough to greet me at the station.
 <<jump GreetedByEngineer2>>
 ===
@@ -110,12 +110,12 @@ tags:
 colorID: 0
 position: 750,1925
 ---
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 Together we walked into the forest, where the construction lay almost finished, but paused due the recent disruption.
 -> Ask engineer about state of infestation
     <<jump AskEngineer>>
 -> Check on infestation
-    <<jump CheckOnTermites>>
+    <<CheckOnTermites>>
 ===
 title: AskEngineer
 tags: 
@@ -130,7 +130,7 @@ tags:
 colorID: 0
 position: 753,2460
 ---
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 I approached the building. It stood on four large wooden pillars, mimicking the stance of the pine trees. It looked quite ordinary to the naked eye. I knocked against one of the pillars. 
     <<jump CheckOnTermites2>>
 ===
@@ -179,7 +179,7 @@ tags:
 colorID: 0
 position: 749,2992
 ---
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 I'm still on the train. I should be arriving soon. I am not eager to get there. Riding the train whilst daydreaming is one of my favorite things to do. We enter a tunnel.
 -> Get coffee
     <<jump GetCoffeEnd>>
@@ -216,5 +216,5 @@ colorID: 0
 position: 751,3529
 ---
 What would I give to inhabit the mind of a termite, the great artisan, hurrying back and forth, left and right through the many branching routes of its home. I am in tunnel, too. But I can only go straight ahead.
-<<stopVideo "Video Texture">>
+<<stopVideo>>
 ===
