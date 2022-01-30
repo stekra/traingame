@@ -1,8 +1,28 @@
 ﻿title: 9
+tags: 
+colorID: 0
+position: 749,2992
 ---
-Made in 24h for Global Game Jam 2022
-in Switzerland and its trains
-by Linn Spitz & Stefan Kraft
-(prelithic.net & quadrilateral.party)
-<<quit "Video Behavior">>
+I'm still on the train. I should be arriving soon. I am not eager to get there. Riding the train whilst daydreaming is one of my favorite things to do. We enter a tunnel.
+-> Get coffee
+    <<jump GetCoffeEnd>>
+-> Stare at reflection
+    <<jump StareAtReflection>>
+===
+
+title: GetCoffeEnd
+tags: 
+colorID: 0
+position: 577,3262
+---
+The conductor passed by. "Excuse me, in which direction is the restaurant car?". He smiles. "Either!", he exclaims enthusiastically. This is too much for me, I think and I stay seated.
+<<jump StareAtReflection>>
+===
+
+title: StareAtReflection
+tags: 
+colorID: 0
+position: 751,3529
+---
+I stare at my reflection in the window, shifting my focus back and forth between my face and the tunnel wall that is rushing by at an incomprehensible speed.
 ===

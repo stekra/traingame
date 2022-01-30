@@ -1,46 +1,24 @@
 ﻿title: 8
 tags: 
 colorID: 0
-position: 749,2992
+position: 753,2715
 ---
-I'm still on the train. I should be arriving soon. I am not eager to get there. Riding the train whilst daydreaming is one of my favorite things to do. We enter a tunnel.
--> Get coffee
-    <<jump GetCoffeEnd>>
--> Stare at reflection
-    <<jump StareAtReflection>>
+For the next few days I found myself invigorated by the creative force of the termites. I was putting out some of my best architectural work. 
+<<jump PhoneCall2>>
 ===
-
-title: GetCoffeEnd
+title: PhoneCall2
 tags: 
 colorID: 0
-position: 577,3262
+position: 753,2715
 ---
-The conductor passed by. "Excuse me, in which direction is the restaurant car?". He smiles. "Either!", he exclaims enthusiastically. This is too much for me, I think and I stay seated.
-<<jump StareAtReflection>>
+One day my business partner called me. "I think they are spreading", he said. "Buildings have been crumbling all around the country. I think we should inform the authorities after all." 
+<<jump PhoneCall3>>
 ===
 
-title: StareAtReflection
+title: PhoneCall3
 tags: 
 colorID: 0
-position: 751,3529
+position: 753,2715
 ---
-I stare at my reflection in the window, shifting my focus back and forth between my face and the tunnel wall that is rushing by at an incomprehensible speed.
-<<jump StareAtReflection2>>
-===
-
-title: StareAtReflection2
-tags: 
-colorID: 0
-position: 751,3529
----
-This is the longest train tunnel in world, I suddenly remember. I think about the termites' beautiful constructions. All that I can do is ponder the fine veins in the wood from above.
-<<jump StareAtReflection3>>
-===
-
-title: StareAtReflection3
-tags: 
-colorID: 0
-position: 751,3529
----
-What would I give to inhabit the mind of a termite, the great artisan, hurrying back and forth, left and right through the many branching routes of its home. I am in tunnel, too. But I can only go straight ahead.
+After that call I laid down the phone, elated. They destroy as they build, I thought. It's in their nature. And I never once thought to inform anyone of the termites' existence.
 ===

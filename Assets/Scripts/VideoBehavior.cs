@@ -7,7 +7,6 @@ using Yarn.Unity;
 
 public class VideoBehavior : MonoBehaviour
 {
-    public VideoClip[] clips;
     int clipIndex = 0;
     public Vector2 speedRange;
     public TrainPathFollower train;
@@ -28,7 +27,7 @@ public class VideoBehavior : MonoBehaviour
         dialogueRunner = FindObjectOfType<DialogueRunner>();
         videoTexture = GetComponent<RawImage>();
         videoPlayer = GetComponent<VideoPlayer>();
-        videoPlayer.clip = clips[clipIndex];
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, clipIndex.ToString() + ".mp4");
         currentFadeColor = new Color(1, 1, 1, 0);
     }
 
@@ -52,7 +51,7 @@ public class VideoBehavior : MonoBehaviour
         {
             fadingOut = false;
             train.speedFrozen = false;
-            videoPlayer.clip = clips[clipIndex];
+            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, clipIndex.ToString() + ".mp4");
         }
 
         // Set the alpha of the texture
@@ -79,9 +78,12 @@ public class VideoBehavior : MonoBehaviour
         if (active)
         {
             active = false;
-            clipIndex += 1;
 
-            fadingOut = true;
+            if (clipIndex <= 12) // Stay on last scene
+            {
+                clipIndex += 1;
+                fadingOut = true;
+            }
         }
     }
 
