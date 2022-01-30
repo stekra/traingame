@@ -5,9 +5,9 @@ public class TrainPathFollower : MonoBehaviour
 {
     public PathCreator pathCreator;
     [HideInInspector]
-    public float speed = 0;
-    public float maxSpeed = 5;
-    public float speedLerpFalloff = 0.02f;
+    public float speed = 1f;
+    public float maxSpeed = 20f;
+    public float speedLerpFalloff = 0.03f;
     float wagonOffset;
     float distanceTravelled;
     [HideInInspector]
@@ -42,7 +42,12 @@ public class TrainPathFollower : MonoBehaviour
 
         if (!speedFrozen)
         {
-            speed = Mathf.Lerp(speed, 0, speedLerpFalloff);
+            Vector3 slope = pathCreator.path.GetDirectionAtDistance(distanceTravelled);
+            float slopeSpeed = Vector3.Dot(slope, Vector3.down) * maxSpeed;
+
+            speed = Mathf.Lerp(speed, slopeSpeed, speedLerpFalloff);
+
+            // Sound
             float speed01 = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(speed));
             rollingAudio.volume = speed01 / 2;
             rollingAudio.pitch = 1 + speed01 * 0.3f;
