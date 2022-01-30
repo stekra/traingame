@@ -1,0 +1,220 @@
+title: Start
+tags: 
+colorID: 0
+position: 754,355
+---
+It's 10am and I am still tired. I should go to the restaurant car for a cup of coffee.
+-> Get coffee
+    <<jump GetCoffee>>
+-> Look out the window
+    <<jump LookOutWindow>>
+===
+title: GetCoffee
+tags: 
+colorID: 0
+position: 576,614
+---
+The restaurant car is in the middle of the train. Am I at the start or at the end? I think I'll just stay here and hope I don't fall asleep.
+    <<jump Watching>>
+===
+title: LookOutWindow
+tags: 
+colorID: 0
+position: 919,610
+---
+The world is passing by quite unremarkably.
+    <<jump Watching>>
+===
+title: Termites1
+tags: 
+colorID: 0
+position: 753,1399
+---
+<<stopVideo>>
+The house I was building turned out to have been befallen by a pest of termites feasting on all of its wooden components.
+<<jump Termites2>>
+===
+title: Termites2
+tags: 
+colorID: 0
+position: 753,1399
+---
+Termites are not native to this region. Our working theory was that they had been flown in with a batch of metal eyelets that my business partner was ordering from some unknown place on the Australian continent.
+<<jump Termites3>>
+===
+title: Termites3
+tags: 
+colorID: 0
+position: 753,1399
+---
+I wanted to inform the authorities about the potential invasive species, but my business partner wished to keep his contacts undisclosed.
+<<jump Termites4>>
+===
+title: Termites4
+tags: 
+colorID: 0
+position: 753,1399
+---
+As the architect I felt personally responsible. So I returned to the site one day to inspect every bite the insects had taken out of the edifice.
+-> Dont return to the site
+    <<jump DontReturnSite>>
+-> Return to site
+    <<jump ReturnToSite>>
+    
+===
+title: DontReturnSite
+tags: 
+colorID: 0
+position: 561,1665
+---
+I can't change the past.
+    <<jump GreetedByEngineer>>
+===
+title: ReturnToSite
+tags: 
+colorID: 0
+position: 928,1665
+---
+Yes, as I said, I returned.
+    <<jump GreetedByEngineer>>
+===
+title: Watching
+tags: 
+colorID: 0
+position: 753,866
+---
+<<stopVideo>>
+Trees and houses drive by and I wonder where they're headed.
+    <<jump WorkTravel>>
+===
+title: WorkTravel
+tags: 
+colorID: 0
+position: 752,1119
+---
+<<stopVideo>>
+It's not unusual for me to travel for work. My most recent trip is still present in my mind.
+    <<jump Termites1>>
+===
+title: GreetedByEngineer
+tags: 
+colorID: 0
+position: 750,1925
+---
+<<stopVideo>>
+On my train ride that day, I had funny feeling in my stomach that had nothing to do with all the coffee I had that day. The project's lead engineer was kind enough to greet me at the station.
+<<jump GreetedByEngineer2>>
+===
+title: GreetedByEngineer2
+tags: 
+colorID: 0
+position: 750,1925
+---
+<<stopVideo>>
+Together we walked into the forest, where the construction lay almost finished, but paused due the recent disruption.
+-> Ask engineer about state of infestation
+    <<jump AskEngineer>>
+-> Check on infestation
+    <<CheckOnTermites>>
+===
+title: AskEngineer
+tags: 
+colorID: 0
+position: 519,2193
+---
+"They've been gobbling up the foundation like it ain't nothing" He looked troubled. "To be frank, I am not sure how the structure is still standing".
+    <<jump CheckOnTermites>>
+===
+title: CheckOnTermites
+tags: 
+colorID: 0
+position: 753,2460
+---
+<<stopVideo>>
+I approached the building. It stood on four large wooden pillars, mimicking the stance of the pine trees. It looked quite ordinary to the naked eye. I knocked against one of the pillars. 
+    <<jump CheckOnTermites2>>
+===
+title: CheckOnTermites2
+tags: 
+colorID: 0
+position: 753,2460
+---
+A hollow wooden clang resonated through the structure and reverberated through the forest. Something hushed away in the nearby bushes. Astonished, I hesitated. I bent down to the base of the pillar. 
+    <<jump CheckOnTermites3>>
+===
+title: CheckOnTermites3
+tags: 
+colorID: 0
+position: 753,2460
+---
+A fine, net-like structure was carved into the wood with precision. One bite after another had been torn off the building to form a pristine network of tunnels and cave. It was marvelous work indeed.
+    <<jump PhoneCall>>
+===
+title: PhoneCall
+tags: 
+colorID: 0
+position: 753,2715
+---
+For the next few days I found myself invigorated by the creative force of the termites. I was putting out some of my best architectural work. 
+    <<jump PhoneCall2>>
+===
+title: PhoneCall2
+tags: 
+colorID: 0
+position: 753,2715
+---
+One day my business partner called me. "I think they are spreading", he said. "Buildings have been crumbling all around the country. I think we should inform the authorities after all." 
+    <<jump PhoneCall3>>
+===
+title: PhoneCall3
+tags: 
+colorID: 0
+position: 753,2715
+---
+After that call I laid down the phone, elated. They destroy as they build, I thought. It's in their nature. And I never once thought to inform anyone of the termites' existence.
+    <<jump Gotthard>>
+===
+title: Gotthard
+tags: 
+colorID: 0
+position: 749,2992
+---
+<<stopVideo>>
+I'm still on the train. I should be arriving soon. I am not eager to get there. Riding the train whilst daydreaming is one of my favorite things to do. We enter a tunnel.
+-> Get coffee
+    <<jump GetCoffeEnd>>
+-> Stare at reflection
+    <<jump StareAtReflection>>
+===
+title: GetCoffeEnd
+tags: 
+colorID: 0
+position: 577,3262
+---
+The conductor passed by. "Excuse me, in which direction is the restaurant car?". He smiles. "Either!", he exclaims enthusiastically. This is too much for me, I think and I stay seated.
+    <<jump StareAtReflection>>
+===
+title: StareAtReflection
+tags: 
+colorID: 0
+position: 751,3529
+---
+I stare at my reflection in the window, shifting my focus back and forth between my face and the tunnel wall that is rushing by at an incomprehensible speed.
+<<jump StareAtReflection2>>
+===
+title: StareAtReflection2
+tags: 
+colorID: 0
+position: 751,3529
+---
+This is the longest train tunnel in world, I suddenly remember. I think about the termites' beautiful constructions. All that I can do is ponder the fine veins in the wood from above.
+<<jump StareAtReflection3>>
+===
+title: StareAtReflection3
+tags: 
+colorID: 0
+position: 751,3529
+---
+What would I give to inhabit the mind of a termite, the great artisan, hurrying back and forth, left and right through the many branching routes of its home. I am in tunnel, too. But I can only go straight ahead.
+<<stopVideo>>
+===

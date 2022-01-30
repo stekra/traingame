@@ -1,0 +1,152 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "It's 10am and I am still tired. I should go to the restaurant car for a cup of coffee.\n[[Get coffee |GetCoffee]]\n[[Look out the window|LookOutWindow]]",
+		"position": {
+			"x": 754,
+			"y": 355
+		},
+		"colorID": 0
+	},
+	{
+		"title": "GetCoffee",
+		"tags": "",
+		"body": "The restaurant car is in the middle of the train. Am I at the start or at the end? I think I'll just stay here and hope I don't fall asleep.[[Watching]]",
+		"position": {
+			"x": 576,
+			"y": 614
+		},
+		"colorID": 0
+	},
+	{
+		"title": "LookOutWindow",
+		"tags": "",
+		"body": "The world is passing by quite unremarkably.[[Watching]]",
+		"position": {
+			"x": 919,
+			"y": 610
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Termites1",
+		"tags": "",
+		"body": "The house I was building turned out to have been befallen by a pest of termites feasting on all of its wooden components.\n\nTermites are not native to this region. Our working theory was that they had been flown in with a batch of metal eyelets that my business partner was ordering from some unknown place on the Australian continent. I wanted to inform the authorities about the potential invasive species, but my business partner wished to keep his contacts undisclosed.\n\nAs the architect I felt personally responsible. So I returned to the site one day to inspect every bite the insects had taken out of the edifice.\n[[Don't return to the site|DontReturnSite]]\n[[Return to site|ReturnToSite]]",
+		"position": {
+			"x": 753,
+			"y": 1399
+		},
+		"colorID": 0
+	},
+	{
+		"title": "DontReturnSite",
+		"tags": "",
+		"body": "I can't change the past.\n[[GreetedByEngineer]]",
+		"position": {
+			"x": 561,
+			"y": 1665
+		},
+		"colorID": 0
+	},
+	{
+		"title": "ReturnToSite",
+		"tags": "",
+		"body": "Yes, as I said, I returned.\n[[GreetedByEngineer]]",
+		"position": {
+			"x": 928,
+			"y": 1665
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Watching",
+		"tags": "",
+		"body": "Trees and houses drive by and I wonder where they're headed.[[WorkTravel]]",
+		"position": {
+			"x": 753,
+			"y": 866
+		},
+		"colorID": 0
+	},
+	{
+		"title": "WorkTravel",
+		"tags": "",
+		"body": "It's not unusual for me to travel for work. My most recent trip is still present in my mind.[[Termites1]]",
+		"position": {
+			"x": 752,
+			"y": 1119
+		},
+		"colorID": 0
+	},
+	{
+		"title": "GreetedByEngineer",
+		"tags": "",
+		"body": "On my train ride that day, I had funny feeling in my stomach that had nothing to do with all the coffee I had that day. The project's lead engineer was kind enough to greet me at the station. Together we walked into the forest, where the construction lay almost finished, but paused due the recent disruption.\n[[Ask engineer about state of infestation|AskEngineer]]\n[[Check on infestation|CheckOnTermites]]",
+		"position": {
+			"x": 750,
+			"y": 1925
+		},
+		"colorID": 0
+	},
+	{
+		"title": "AskEngineer",
+		"tags": "",
+		"body": "\"They've been gobbling up the foundation like it ain't nothing\" He looked troubled. \"To be frank, I am not sure how the structure is still standing\".\n[[CheckOnTermites]]",
+		"position": {
+			"x": 519,
+			"y": 2193
+		},
+		"colorID": 0
+	},
+	{
+		"title": "CheckOnTermites",
+		"tags": "",
+		"body": "I approached the building. It stood on four large wooden pillars, mimicking the stance of the pine trees. It looked quite ordinary to the naked eye. I knocked against one of the pillars. A hollow wooden clang resonated through the structure and reverberated through the forest. Something hushed away in the nearby bushes. Astonished, I hesitated. I bent down to the base of the pillar. A fine, net-like structure was carved into the wood with precision. One bite after another had been torn off the building to form a pristine network of tunnels and cave. It was marvelous work indeed.\n[[PhoneCall]]",
+		"position": {
+			"x": 753,
+			"y": 2460
+		},
+		"colorID": 0
+	},
+	{
+		"title": "PhoneCall",
+		"tags": "",
+		"body": "For the next few days I found myself invigorated by the creative force of the termites. I was putting out some of my best architectural work. One day my business partner called me. \"I think they are spreading\", he said. \"Buildings have been crumbling all around the country. I think we should inform the authorities after all.\" After that call I laid down the phone, elated. They destroy as they build, I thought. It's in their nature. And I never once thought to inform anyone of the termites' existence.\n[[Gotthard]]",
+		"position": {
+			"x": 753,
+			"y": 2715
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Gotthard",
+		"tags": "",
+		"body": "I'm still on the train. I should be arriving soon. I am not eager to get there. Riding the train whilst daydreaming is one of my favorite things to do. We enter a tunnel.\n[[Get Coffee|GetCoffeEnd]]\n[[Stare at reflection|StareAtReflection]]",
+		"position": {
+			"x": 749,
+			"y": 2992
+		},
+		"colorID": 0
+	},
+	{
+		"title": "GetCoffeEnd",
+		"tags": "",
+		"body": "The conductor passed by. \"Excuse me, in which direction is the restaurant car?\". He smiles. \"Either!\", he exclaims enthusiastically. This is too much for me, I think and I stay seated.\n[[StareAtReflection]]",
+		"position": {
+			"x": 577,
+			"y": 3262
+		},
+		"colorID": 0
+	},
+	{
+		"title": "StareAtReflection",
+		"tags": "",
+		"body": "I stare at my reflection in the window, shifting my focus back and forth between my face and the tunnel wall that is rushing by at an incomprehensible speed. This is the longest train tunnel in world, I suddenly remember. I think about the termites' beautiful constructions. All that I can do is ponder the fine veins in the wood from above. What would I give to inhabit the mind of a termite, the great artisan, hurrying back and forth, left and right through the many branching routes of its home. I am in tunnel, too. But I can only go straight ahead.",
+		"position": {
+			"x": 751,
+			"y": 3529
+		},
+		"colorID": 0
+	}
+]
