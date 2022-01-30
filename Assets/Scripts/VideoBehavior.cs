@@ -31,6 +31,7 @@ public class VideoBehavior : MonoBehaviour
 
     void Update()
     {
+        // Check fading in condition
         if (!active)
         {
             if (inSpeedRange() && !fadingOut)
@@ -43,6 +44,7 @@ public class VideoBehavior : MonoBehaviour
             }
         }
 
+        // Fade out all the way after being active
         if (fadingOut && fade <= 0)
         {
             fadingOut = false;
@@ -50,9 +52,11 @@ public class VideoBehavior : MonoBehaviour
             videoPlayer.clip = clips[clipIndex];
         }
 
+        // Set the alpha of the texture
         currentFadeColor.a = Mathf.InverseLerp(2, fadeDuration, fade);
         videoTexture.color = currentFadeColor;
 
+        // Activate!
         if (fade >= fadeDuration && !fadingOut)
         {
             active = true;
@@ -65,9 +69,10 @@ public class VideoBehavior : MonoBehaviour
         return Mathf.Abs(train.speed) >= speedRange.x && Mathf.Abs(train.speed) <= speedRange.y;
     }
 
-    // [YarnCommand("stopVideo")]
+    [Yarn.Unity.YarnCommand("stopVideo")]
     public void stopVideo()
     {
+        print("stopvideo runs!");
         active = false;
         clipIndex += 1;
         if (clipIndex >= clips.Length)
