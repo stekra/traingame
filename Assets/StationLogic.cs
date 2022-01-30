@@ -27,8 +27,6 @@ public class StationLogic : MonoBehaviour
             SetVisuals();
             StartCoroutine(ChooseNewStation());
         }
-
-        print("yo");
     }
 
     public void SetVisuals()
