@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using Yarn.Unity;
 
 public class VideoBehavior : MonoBehaviour
 {
@@ -20,9 +21,11 @@ public class VideoBehavior : MonoBehaviour
 
     RawImage videoTexture;
     VideoPlayer videoPlayer;
+    DialogueRunner dialogueRunner;
 
     void Start()
     {
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
         videoTexture = GetComponent<RawImage>();
         videoPlayer = GetComponent<VideoPlayer>();
         videoPlayer.clip = clips[clipIndex];
@@ -57,10 +60,12 @@ public class VideoBehavior : MonoBehaviour
         videoTexture.color = currentFadeColor;
 
         // Activate!
-        if (fade >= fadeDuration && !fadingOut)
+        if (fade >= fadeDuration && !active && !fadingOut)
         {
             active = true;
             train.speedFrozen = true;
+
+            dialogueRunner.StartDialogue(clipIndex.ToString());
         }
     }
 
@@ -69,19 +74,20 @@ public class VideoBehavior : MonoBehaviour
         return Mathf.Abs(train.speed) >= speedRange.x && Mathf.Abs(train.speed) <= speedRange.y;
     }
 
-    [Yarn.Unity.YarnCommand("stopVideo")]
     public void stopVideo()
     {
-        print("stopvideo runs!");
-        active = false;
-        clipIndex += 1;
-        if (clipIndex >= clips.Length)
+        if (active)
         {
-            print("The End!");
-        }
-        else
-        {
+            active = false;
+            clipIndex += 1;
+
             fadingOut = true;
         }
+    }
+
+    [YarnCommand("quit")]
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

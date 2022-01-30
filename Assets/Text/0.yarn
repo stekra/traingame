@@ -1,0 +1,27 @@
+﻿title: 0
+tags: 
+colorID: 0
+position: 754,355
+---
+It's 10am and I am still tired. I should go to the restaurant car for a cup of coffee.
+-> Get coffee
+    <<jump GetCoffee>>
+-> Look out the window
+    <<jump LookOutWindow>>
+===
+
+title: GetCoffee
+tags: 
+colorID: 0
+position: 576,614
+---
+The restaurant car is in the middle of the train. Am I at the start or at the end? I think I'll just stay here and hope I don't fall asleep.
+===
+
+title: LookOutWindow
+tags: 
+colorID: 0
+position: 919,610
+---
+The world is passing by quite unremarkably.
+===
